@@ -1,0 +1,9 @@
+# available colours are: white, yellow, green, blue,
+#                        cyan, red, magenta, black,
+#                        darkwhite, darkyellow, darkgreen,
+#                        darkblue, darkcyan, darkred,
+#                        darkmagenta, darkblack
+
+newtext=darkgreen
+oldtext=darkred
+diffstuff=darkblue
