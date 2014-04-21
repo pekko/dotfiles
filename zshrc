@@ -1,5 +1,3 @@
-umask 0007
-
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
@@ -47,7 +45,7 @@ DISABLE_CORRECTION="true"
 # Uncomment following line if you want to disable marking untracked files under
 # VCS as dirty. This makes repository status check for large repositories much,
 # much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -59,3 +57,4 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export PATH=/Users/pekko/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:$PATH
 LESS="$LESS -f"
+alias geoiplookup='geoiplookup -f /opt/local/share/GeoIP/GeoLiteCity.dat'
