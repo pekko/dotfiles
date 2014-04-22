@@ -1,8 +1,7 @@
 #!/bin/bash
 
 function usage {
-	echo "Usage:"
-	echo $0" [linux|mac]"
+	echo "Usage: "$0" [linux|mac]"
 	exit 1
 }
 
@@ -21,4 +20,4 @@ for f in $SYSTEM/*; do
 	ln -s $DIR/$f ~/.$(basename $f);
 done
 
-ln -s $DIR/common/pecko.zsh-theme $HOME/.oh-my-zsh/themes/pecko.zsh-theme
+ln -s $DIR/special/pecko.zsh-theme $HOME/.oh-my-zsh/themes/pecko.zsh-theme

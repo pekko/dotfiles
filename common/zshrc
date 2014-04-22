@@ -56,7 +56,6 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 plugins=(git osx)
 
 source $ZSH/oh-my-zsh.sh
-echo $SYSTEM
 
 # Customize to your needs...
 if [[ $SYSTEM == "mac" ]]; then
