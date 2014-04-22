@@ -1,6 +1,9 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
+SYSTEM="mac"
+#SYSTEM="linux"
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -53,8 +56,15 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 plugins=(git osx)
 
 source $ZSH/oh-my-zsh.sh
+echo $SYSTEM
 
 # Customize to your needs...
-export PATH=/Users/pekko/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:$PATH
+if [[ $SYSTEM == "mac" ]]; then
+	plugins=(git osx)
+	export PATH=/Users/pekko/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:$PATH
+	alias geoiplookup='geoiplookup -f /opt/local/share/GeoIP/GeoLiteCity.dat'
+else
+	plugins=(git)
+fi
+
 LESS="$LESS -f"
-alias geoiplookup='geoiplookup -f /opt/local/share/GeoIP/GeoLiteCity.dat'
