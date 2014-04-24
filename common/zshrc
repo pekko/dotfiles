@@ -62,3 +62,7 @@ fi
 source $ZSH/oh-my-zsh.sh
 
 LESS="$LESS -f"
+
+if [[ -e $HOME/.zshrc-custom ]]; then
+		source $HOME/.zshrc-custom;
+fi
