@@ -1,8 +1,8 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
-SYSTEM="mac"
-#SYSTEM="linux"
+#SYSTEM="mac"
+SYSTEM="linux"
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -50,13 +50,6 @@ DISABLE_CORRECTION="true"
 # much faster.
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx)
-
-source $ZSH/oh-my-zsh.sh
-
 # Customize to your needs...
 if [[ $SYSTEM == "mac" ]]; then
 	plugins=(git osx)
@@ -65,5 +58,7 @@ if [[ $SYSTEM == "mac" ]]; then
 else
 	plugins=(git)
 fi
+
+source $ZSH/oh-my-zsh.sh
 
 LESS="$LESS -f"
