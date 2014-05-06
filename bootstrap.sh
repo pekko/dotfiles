@@ -13,11 +13,11 @@ SYSTEM=$1
 DIR=$(pwd)
 
 for f in common/*; do 
-	ln -s $DIR/$f ~/.$(basename $f);
+	ln -is $DIR/$f ~/.$(basename $f);
 done
 
 for f in $SYSTEM/*; do
-	ln -s $DIR/$f ~/.$(basename $f);
+	ln -is $DIR/$f ~/.$(basename $f);
 done
 
-ln -s $DIR/special/pecko.zsh-theme $HOME/.oh-my-zsh/themes/pecko.zsh-theme
+ln -fs $DIR/special/pecko.zsh-theme $HOME/.oh-my-zsh/themes/pecko.zsh-theme
