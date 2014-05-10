@@ -53,7 +53,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Customize to your needs...
 if [[ $SYSTEM == "mac" ]]; then
 	plugins=(git osx)
-	export PATH=/Users/pekko/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:$PATH
+	export PATH=/Users/pekko/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$PATH
 	alias geoiplookup='geoiplookup -f /opt/local/share/GeoIP/GeoLiteCity.dat'
 else
 	plugins=(git)
