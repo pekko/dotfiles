@@ -9,5 +9,5 @@
 	deltaBaseCacheLimit = 1G
 [alias]
 	st = status
-[ui]
-	color = true
+[color]
+	ui = true
