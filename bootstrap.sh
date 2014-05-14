@@ -1,15 +1,11 @@
 #!/bin/bash
 
-function usage {
-	echo "Usage: "$0" [linux|mac]"
-	exit 1
-}
-
-if [[ $# < 1 ]]; then
-	usage
+if [[ $(uname) == "Darwin" ]]; then
+    SYSTEM="mac"
+else
+    SYSTEM="linux"
 fi
 
-SYSTEM=$1
 DIR=$(pwd)
 
 for f in common/*; do 
