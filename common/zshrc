@@ -59,6 +59,9 @@ if [[ $SYSTEM == "mac" ]]; then
 	plugins=(git osx)
 	export PATH=/Users/pekko/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$PATH
 	alias geoiplookup='geoiplookup -f /opt/local/share/GeoIP/GeoLiteCity.dat'
+
+    pman () { man -t $* | open -a Preview -f }
+
 else
 	plugins=(git)
 fi
