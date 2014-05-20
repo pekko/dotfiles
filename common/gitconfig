@@ -2,8 +2,7 @@
 	name = Pekko Lipsanen
 	email = pekko.lipsanen@iki.fi
 [push]
-# this causes trouble. Enable if git is new enough
-#	default = simple
+	default = current
 [core]
 	autocrlf = false
 	filemode = false
