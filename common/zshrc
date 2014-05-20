@@ -61,6 +61,7 @@ if [[ $SYSTEM == "mac" ]]; then
 	alias geoiplookup='geoiplookup -f /opt/local/share/GeoIP/GeoLiteCity.dat'
 
     pman () { man -t $* | open -a Preview -f }
+    alias locate='echo "On mac, use mdfind"'
 
 else
 	plugins=(git)
