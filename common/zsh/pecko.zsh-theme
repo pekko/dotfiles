@@ -13,7 +13,7 @@ local current_dir='%{$fg[blue]%} %~%{$reset_color%}'
 local git_branch='$(git_prompt_info)%{$reset_color%}'
 
 PROMPT="
-╭─${user_host} ${current_dir} ${rvm_ruby} ${git_branch}
+╭─${user_host} ${current_dir} ${git_branch}
 ╰─%B$%b "
 RPS1="${return_code}"
 
