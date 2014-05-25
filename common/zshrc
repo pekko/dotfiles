@@ -27,9 +27,6 @@ source $ZSH/pecko.zsh-theme
 source $ZSH/history.zsh
 
 LESS="$LESS -f"
-bindkey -e
-bindkey '^A' beginning-of-line
-bindkey '^E' end-of-line
 
 if [[ -e $HOME/.zshrc-custom ]]; then
 		source $HOME/.zshrc-custom;
