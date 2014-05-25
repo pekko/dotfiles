@@ -1,4 +1,3 @@
-# Path to your oh-my-zsh configuration.
 ZSH=$HOME/.zsh
 
 if [[ $(uname) == "Darwin" ]]; then
@@ -7,44 +6,30 @@ else
 	SYSTEM="linux"
 fi
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="pecko"
 export TERM=xterm-256color
-
-# history tweaks
-autoload -U history-search-end
-setopt HIST_IGNORE_SPACE
-
-zle -N history-beginning-search-backward-end history-search-end
-zle -N history-beginning-search-forward-end history-search-end
-
-bindkey "\e[A" history-beginning-search-backward-end
-bindkey "\e[B" history-beginning-search-forward-end
-
-
 
 # System-specific
 if [[ $SYSTEM == "mac" ]]; then
-	plugins=(git osx)
 	export PATH=/Users/pekko/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$PATH
 	alias geoiplookup='geoiplookup -f /opt/local/share/GeoIP/GeoLiteCity.dat'
 
     pman () { man -t $* | open -a Preview -f }
     alias locate='echo "On mac, use mdfind"'
-
 else
-	plugins=(git)
+	
 fi
 
-# source $ZSH/oh-my-zsh.sh
+source $ZSH/aliases.zsh
 source $ZSH/git.zsh
+source $ZSH/keys.zsh
 source $ZSH/theme-and-appearance.zsh
 source $ZSH/pecko.zsh-theme
+source $ZSH/history.zsh
 
 LESS="$LESS -f"
+bindkey -e
+bindkey '^A' beginning-of-line
+bindkey '^E' end-of-line
 
 if [[ -e $HOME/.zshrc-custom ]]; then
 		source $HOME/.zshrc-custom;
