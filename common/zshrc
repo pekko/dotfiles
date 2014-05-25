@@ -15,6 +15,7 @@ if [[ $SYSTEM == "mac" ]]; then
 
     pman () { man -t $* | open -a Preview -f }
     alias locate='echo "On mac, use mdfind"'
+    alias ls=gls
 else
 	
 fi
