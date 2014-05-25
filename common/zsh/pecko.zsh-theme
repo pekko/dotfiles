@@ -3,12 +3,12 @@ local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
 local user_color=""
 
 if [[ $EUID = 0 ]]; then
-	user_color=red
+	user_color=1
 else
-	user_color=green
+	user_color=2
 fi
 
-local user_host='%{$fg[$user_color]%}%n@%m%{$reset_color%}'
+local user_host='%F{$user_color}%n@%m%{$reset_color%}'
 local current_dir='%F{12} %~%{$reset_color%}'
 local git_branch='$(git_prompt_info)%{$reset_color%}'
 
