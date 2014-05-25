@@ -9,7 +9,7 @@ else
 fi
 
 local user_host='%{$fg[$user_color]%}%n@%m%{$reset_color%}'
-local current_dir='%{$fg[blue]%} %~%{$reset_color%}'
+local current_dir='%F{12} %~%{$reset_color%}'
 local git_branch='$(git_prompt_info)%{$reset_color%}'
 
 PROMPT="
@@ -17,7 +17,7 @@ PROMPT="
 ╰─%B$%b "
 RPS1="${return_code}"
 
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[yellow]%}‹"
+ZSH_THEME_GIT_PROMPT_PREFIX="%F{100}‹"
 ZSH_THEME_GIT_PROMPT_SUFFIX="› %{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY=" ✗"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
