@@ -1,4 +1,5 @@
 # from oh-my-zsh/lib/git.zsh
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # get the name of the branch we are on
 function git_prompt_info() {
