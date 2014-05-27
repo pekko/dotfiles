@@ -6,8 +6,6 @@ else
 	SYSTEM="linux"
 fi
 
-export TERM=xterm-256color
-
 # System-specific
 if [[ $SYSTEM == "mac" ]]; then
 	export PATH=/Users/pekko/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$PATH
@@ -15,7 +13,7 @@ if [[ $SYSTEM == "mac" ]]; then
 
     pman () { man -t $* | open -a Preview -f }
     alias locate='echo "On mac, use mdfind"'
-    alias ls=gls
+    alias ls='gls --color=auto'
 else
 	
 fi
