@@ -1,9 +1,9 @@
-local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
+local return_code="%(?..%F{9}%? ↵%{$reset_color%})"
 
 local user_color=""
 
 if [[ $EUID = 0 ]]; then
-	user_color=1
+	user_color=9
 else
 	user_color=2
 fi
@@ -14,7 +14,7 @@ local git_branch='$(git_prompt_info)%{$reset_color%}'
 
 PROMPT="
 ╭─${user_host} ${current_dir} ${git_branch}
-╰─%B$%b "
+╰─%B$ %f%b%k% "
 RPS1="${return_code}"
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%F{100}‹"
