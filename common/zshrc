@@ -13,9 +13,9 @@ if [[ $SYSTEM == "mac" ]]; then
 
     pman () { man -t $* | open -a Preview -f }
     alias locate='echo "On mac, use mdfind"'
-    alias ls='gls'
+    alias ls='gls --color=auto'
 else
-	
+	alias ls='ls --color=auto'
 fi
 
 source $ZSH/aliases.zsh
