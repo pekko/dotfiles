@@ -8,7 +8,7 @@ fi
 
 # System-specific
 if [[ $SYSTEM == "mac" ]]; then
-    export PATH=/Users/pekko/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$PATH
+    export PATH=/Users/pekko/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$PATH
     alias geoiplookup='geoiplookup -f /opt/local/share/GeoIP/GeoLiteCity.dat'
 
     pman () { man -t $* | open -a Preview -f }
@@ -34,3 +34,5 @@ unset CASE_SENSITIVE
 if [[ -e $HOME/.zshrc-custom ]]; then
         source $HOME/.zshrc-custom;
 fi
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
