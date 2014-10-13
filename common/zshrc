@@ -9,7 +9,6 @@ fi
 # System-specific
 if [[ $SYSTEM == "mac" ]]; then
     export PATH=/Users/pekko/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$PATH
-    alias geoiplookup='geoiplookup -f /opt/local/share/GeoIP/GeoLiteCity.dat'
 
     pman () { man -t $* | open -a Preview -f }
     alias locate='echo "On mac, use mdfind"'
