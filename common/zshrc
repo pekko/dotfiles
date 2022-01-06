@@ -1,4 +1,5 @@
 ZSH=$HOME/.zsh
+source ~/.profile
 
 if [[ $(uname) == "Darwin" ]]; then
     SYSTEM="mac"
@@ -35,3 +36,7 @@ if [[ -e $HOME/.zshrc-custom ]]; then
 fi
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+function chpwd() {
+    emulate -L zsh
+    ls 
+}

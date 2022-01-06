@@ -8,6 +8,7 @@
 	filemode = false
 	deltaBaseCacheLimit = 1G
 [alias]
+    ch = checkout
 	st = status
 [color]
 	ui = true
